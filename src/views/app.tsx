@@ -5,7 +5,9 @@ import LeftNav = require("material-ui/lib/left-nav");
 import Menu = require( "material-ui/lib/menus/menu");
 import MenuItem = require("material-ui/lib/menus/menu-item");
 
-import { Link } from 'react-router';
+import { browserHistory, Link } from 'react-router';
+
+import { BASE_PATH } from '../router';
 
 interface IAppProps {
   children: Object;
@@ -25,7 +27,6 @@ export default class App extends React.Component<IAppProps, IAppState> {
       <div>
         <AppBar title="Title" onLeftIconButtonTouchTap={() => this.toggleLeftNav()} />
         <LeftNav open={this.state.leftNavOpen}>
-          <MenuItem onTouchTap={(e) => this.selectMenuItem(e)}>Home</MenuItem>
           <MenuItem onTouchTap={(e) => this.selectMenuItem(e)}>About</MenuItem>
           <MenuItem onTouchTap={(e) => this.selectMenuItem(e)}>Upload</MenuItem>
         </LeftNav>
@@ -37,14 +38,11 @@ export default class App extends React.Component<IAppProps, IAppState> {
   private selectMenuItem(e: __MaterialUI.TouchTapEvent) {
     const menuItem = e.target;
     switch (e.target.innerText) {
-      case "Home":
-        console.log("home");
-        break;
       case "About":
-        console.log("about");
+        browserHistory.push(`${BASE_PATH}/about`);
         break;
       case "Upload":
-        console.log("upload");
+        browserHistory.push(`${BASE_PATH}/upload`);
         break;
     }
     this.toggleLeftNav();

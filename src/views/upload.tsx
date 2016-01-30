@@ -8,8 +8,7 @@ export default class Upload extends React.Component<{}, {}> {
         <h2>Upload</h2>
         <div onDragEnd={this.onDragLeave}
              onDragLeave={this.onDragLeave}
-             onDragOver={this.onDragOver}
-             onDrop={this.onDrop}>Drag your file here</div>
+             onDragOver={this.onDragOver}>Drag your file here</div>
       </div>
     );
   }
