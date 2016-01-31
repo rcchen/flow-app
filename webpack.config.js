@@ -1,4 +1,6 @@
-module.exports = {
+const webpackTargetElectronRenderer = require('webpack-target-electron-renderer');
+
+var config = {
     entry: './src/init.tsx',
     output: {
         filename: './build/app.js'
@@ -12,3 +14,6 @@ module.exports = {
         ]
     }
 }
+
+config.target = webpackTargetElectronRenderer(config);
+module.exports = config;

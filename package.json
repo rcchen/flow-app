@@ -20,15 +20,17 @@
     "run-sequence": "1.1.5",
     "ts-loader": "0.7.2",
     "typescript": "1.7.5",
-    "webpack": "1.12.9"
+    "webpack": "1.12.9",
+    "webpack-target-electron-renderer": "^0.4.0"
   },
   "dependencies": {
+    "electron-prebuilt": "0.36.7",
     "material-ui": "0.14.2",
     "react": "0.14.6",
     "react-dom": "0.14.6",
-    "react-redux": "^4.0.6",
+    "react-redux": "4.0.6",
     "react-router": "2.0.0-rc5",
     "react-tap-event-plugin": "0.2.1",
-    "redux": "^3.0.6"
+    "redux": "3.0.6"
   }
 }

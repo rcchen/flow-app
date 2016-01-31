@@ -49,3 +49,10 @@ app.on("ready", () => {
     mainWindow = null;
   });
 });
+
+// Set up communication between renderer process and main process
+const ipcMain = electron.ipcMain;
+ipcMain.on("asynchronous-message", (event, arg) => {
+  console.log(arg);
+  event.sender.send("asynchronous-reply", "pong");
+});
