@@ -1,3 +1,4 @@
+/// <reference path="chokidar/chokidar.d.ts" />
 /// <reference path="github-electron/github-electron.d.ts" />
 /// <reference path="glob/glob.d.ts" />
 /// <reference path="material-ui/material-ui.d.ts" />

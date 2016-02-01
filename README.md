@@ -1,4 +1,4 @@
-# react-typescript-base-client
+# flow-app
 
 This project provides a base for React-based client side applications written
 in Typescript. Dependencies are bundled with Webpack.

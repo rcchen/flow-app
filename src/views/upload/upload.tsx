@@ -21,7 +21,7 @@ export default class Upload extends React.Component<{}, {}> {
   public componentDidMount() {
     // Respond to response that registers watch
     this.ipcRenderer.on("register-watch-response", (event: Electron.IPCMainEvent, arg: any) => {
-      console.log(arg);
+      console.log(`Watching ${arg} files`);
     });
   }
 

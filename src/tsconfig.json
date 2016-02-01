@@ -18,13 +18,15 @@
         "../typings/tsd.d.ts",
         "**/*.ts",
         "**/*.tsx",
-        "!node_modules/**",
-        "!electron/**"
+        "!node_modules/**"
     ],
     "compileOnSave": false,
     "buildOnSave": false,
     "files": [
         "../typings/tsd.d.ts",
+        "app/services/ipc.ts",
+        "electron/index.ts",
+        "electron/services/ipc.ts",
         "views/index.ts",
         "app/app.tsx",
         "app/router.tsx",

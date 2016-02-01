@@ -50,7 +50,7 @@ gulp.task('less', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./src/**/*.ts*', ['build-app']);
+  gulp.watch('./src/**/*.ts*', ['build']);
   gulp.watch('./src/**/*.less', ['less']);
   gulp.watch('./src/index.html', ['copy']);
 });

@@ -8,6 +8,7 @@ import MenuItem = require("material-ui/lib/menus/menu-item");
 import { browserHistory, Link } from 'react-router';
 
 import { BASE_PATH } from './router';
+import { initIPC } from './services/ipc';
 
 interface IAppProps {
   children: Object;
@@ -33,6 +34,10 @@ export class App extends React.Component<IAppProps, IAppState> {
         {this.props.children}
       </div>
     );
+  }
+
+  public componentDidMount() {
+    initIPC();
   }
 
   private selectMenuItem(e: __MaterialUI.TouchTapEvent) {
