@@ -11,7 +11,7 @@ export class AppRouter extends React.Component<{}, {}> {
     return (
       <Router history={browserHistory}>
         <Route path={BASE_PATH} component={App}>
-          <IndexRoute component={About} />
+          <IndexRoute component={Upload} />
           <Route path="about" component={About} />
           <Route path="login" component={Login} />
           <Route path="upload" component={Upload} />

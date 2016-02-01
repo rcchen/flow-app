@@ -4,6 +4,7 @@
 "use strict";
 
 import * as electron from "electron";
+import * as glob from "glob";
 
 const APP_DIMENSIONS = {
   height: 600,
@@ -48,11 +49,18 @@ app.on("ready", () => {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+
+  mainWindow.webContents.on("will-navigate", (e: Event) => {
+    e.preventDefault();
+  });
 });
 
 // Set up communication between renderer process and main process
 const ipcMain = electron.ipcMain;
-ipcMain.on("asynchronous-message", (event, arg) => {
-  console.log(arg);
-  event.sender.send("asynchronous-reply", "pong");
+
+// Responsible for getting directory structure
+ipcMain.on("register-watch", (event, arg) => {
+  glob(arg + "**/*", {}, (err, files) => {
+    event.sender.send("register-watch-response", files);
+  });
 });

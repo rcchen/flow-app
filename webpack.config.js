@@ -1,3 +1,4 @@
+const path = require('path');
 const webpackTargetElectronRenderer = require('webpack-target-electron-renderer');
 
 var config = {
@@ -6,7 +7,10 @@ var config = {
         filename: './build/app.js'
     },
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js'],
+        alias: {
+          react: path.resolve('./node_modules/react')
+        }
     },
     module: {
         loaders: [

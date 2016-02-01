@@ -18,7 +18,7 @@
       "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
     },
     "node/node.d.ts": {
-      "commit": "7fffbd3e040a93c244777e3be04cd6223ac69301"
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
     },
     "github-electron/github-electron.d.ts": {
       "commit": "7fffbd3e040a93c244777e3be04cd6223ac69301"
@@ -31,6 +31,12 @@
     },
     "react-redux/react-redux.d.ts": {
       "commit": "86dbea8fc37d9473fee465da4f0a21bea4f8cbd9"
+    },
+    "glob/glob.d.ts": {
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
+    },
+    "minimatch/minimatch.d.ts": {
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
     }
   }
 }

@@ -38,7 +38,6 @@ gulp.task('default', function() {
     'copy',
     'build',
     'less',
-    'serve',
     'watch'
   );
 });
@@ -48,12 +47,6 @@ gulp.task('less', function() {
     .pipe(plugins.less())
     .pipe(plugins.concat('app.css'))
     .pipe(gulp.dest('./build'));
-});
-
-gulp.task('serve', function() {
-  plugins.connect.server({
-    root: 'build'
-  });
 });
 
 gulp.task('watch', function() {
