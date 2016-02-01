@@ -46,7 +46,7 @@ gulp.task('less', function() {
   return gulp.src('./src/**/*.less')
     .pipe(plugins.less())
     .pipe(plugins.concat('app.css'))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./build/app'));
 });
 
 gulp.task('watch', function() {

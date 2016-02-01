@@ -4,7 +4,7 @@ const webpackTargetElectronRenderer = require('webpack-target-electron-renderer'
 var config = {
     entry: './src/init.tsx',
     output: {
-        filename: './build/app.js'
+        filename: './build/app/app.js'
     },
     resolve: {
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js'],
