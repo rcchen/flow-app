@@ -1,6 +1,7 @@
 import React = require('react');
 
-import { App, About, Login, Upload } from './views';
+import { App } from "./app";
+import { About, Login, Upload } from '../views';
 
 import { browserHistory, IndexRoute, Route, Router } from 'react-router';
 

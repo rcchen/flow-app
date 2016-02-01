@@ -4,7 +4,8 @@
 "use strict";
 
 import * as electron from "electron";
-import * as glob from "glob";
+
+import { initIPC } from "./services/ipc";
 
 const APP_DIMENSIONS = {
   height: 600,
@@ -53,14 +54,7 @@ app.on("ready", () => {
   mainWindow.webContents.on("will-navigate", (e: Event) => {
     e.preventDefault();
   });
-});
 
-// Set up communication between renderer process and main process
-const ipcMain = electron.ipcMain;
-
-// Responsible for getting directory structure
-ipcMain.on("register-watch", (event, arg) => {
-  glob(arg + "**/*", {}, (err, files) => {
-    event.sender.send("register-watch-response", files);
-  });
+  // Initialize all IPC channels
+  initIPC();
 });

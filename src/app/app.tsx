@@ -7,7 +7,7 @@ import MenuItem = require("material-ui/lib/menus/menu-item");
 
 import { browserHistory, Link } from 'react-router';
 
-import { BASE_PATH } from '../router';
+import { BASE_PATH } from './router';
 
 interface IAppProps {
   children: Object;
@@ -17,7 +17,7 @@ interface IAppState {
   leftNavOpen: boolean;
 }
 
-export default class App extends React.Component<IAppProps, IAppState> {
+export class App extends React.Component<IAppProps, IAppState> {
   public state: IAppState = {
     leftNavOpen: false
   };

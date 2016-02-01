@@ -17,7 +17,7 @@ gulp.task('build-app', function() {
 });
 
 gulp.task('build-electron', function() {
-  return gulp.src(['./src/index.ts', './typings/tsd.d.ts'])
+  return gulp.src(['./src/electron/**/*.ts', './typings/tsd.d.ts'])
     .pipe(plugins.typescript(tsProject))
     .js
     .pipe(gulp.dest('./build'));

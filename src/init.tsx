@@ -6,7 +6,7 @@ var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
 // Source imports
-import { AppRouter } from './router';
+import { AppRouter } from './app/router';
 
 // Wait until content loaded, then render React app to DOM
 document.addEventListener('DOMContentLoaded', (event) => {

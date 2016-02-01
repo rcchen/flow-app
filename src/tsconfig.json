@@ -18,20 +18,20 @@
         "../typings/tsd.d.ts",
         "**/*.ts",
         "**/*.tsx",
-        "!node_modules/**"
+        "!node_modules/**",
+        "!electron/**"
     ],
     "compileOnSave": false,
     "buildOnSave": false,
     "files": [
         "../typings/tsd.d.ts",
-        "index.ts",
         "views/index.ts",
+        "app/app.tsx",
+        "app/router.tsx",
         "init.tsx",
-        "router.tsx",
-        "views/about.tsx",
-        "views/app.tsx",
-        "views/login.tsx",
-        "views/upload.tsx"
+        "views/about/about.tsx",
+        "views/login/login.tsx",
+        "views/upload/upload.tsx"
     ],
     "atom": {
         "rewriteTsconfig": true
