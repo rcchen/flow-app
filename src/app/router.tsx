@@ -1,7 +1,7 @@
 import React = require('react');
 
 import { App } from "./app";
-import { About, Login, Upload } from '../views';
+import { About, Analysis, Login, Upload } from '../views';
 
 import { browserHistory, IndexRoute, Route, Router } from 'react-router';
 
@@ -12,7 +12,7 @@ export class AppRouter extends React.Component<{}, {}> {
     return (
       <Router history={browserHistory}>
         <Route path={BASE_PATH} component={App}>
-          <IndexRoute component={Upload} />
+          <IndexRoute component={Analysis} />
           <Route path="about" component={About} />
           <Route path="login" component={Login} />
           <Route path="upload" component={Upload} />

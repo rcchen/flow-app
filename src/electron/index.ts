@@ -4,16 +4,20 @@
 "use strict";
 
 import * as electron from "electron";
+import * as fs from "fs";
 
 import { initIPC } from "./services/ipc";
+
+const app = electron.app;
+const BrowserWindow = electron.BrowserWindow;
 
 const APP_DIMENSIONS = {
   height: 600,
   width: 800
 };
 
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const APP_NAME = "flowai";
+export const FULL_APP_PATH = app.getPath("appData") + "/" + APP_NAME;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -21,6 +25,7 @@ var mainWindow: Electron.BrowserWindow = null;
 
 // Quit when all windows are closed.
 app.on("window-all-closed", () => {
+
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform != "darwin") {
@@ -31,6 +36,10 @@ app.on("window-all-closed", () => {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on("ready", () => {
+
+  // Ensure that the application folder is created correctly
+  registerApplicationFolder();
+
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: APP_DIMENSIONS.width,
@@ -56,5 +65,13 @@ app.on("ready", () => {
   });
 
   // Initialize all IPC channels
-  initIPC();
+  initIPC(app);
 });
+
+function registerApplicationFolder() {
+  fs.access(FULL_APP_PATH, fs.W_OK, (err) => {
+    if (err && err.code === "ENOENT") { // folder does not exist
+      fs.mkdirSync(FULL_APP_PATH);
+    }
+  });
+}
