@@ -18,6 +18,18 @@ gulp
 
 ## Provided dependencies/typings
 
-* React (0.14.5)
-* ReactDOM (0.14.5)
+* React (0.14.7)
+* ReactDOM (0.14.7)
 * react-router (2.0.0-rc4)
+
+## Task List
+
+* Application
+  * List out projects that are tracked (using Material tables)
+  * Drag a file to the projects list to initialize the new project
+  * Show list of revisions for a given project
+* Electron
+  * Determine and create user settings configuration format
+  * Standardize IPC passing format
+  * Modularize code
+  * Fix commit timestamps, give a reasonable message
