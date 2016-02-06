@@ -18,7 +18,7 @@
       "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
     },
     "node/node.d.ts": {
-      "commit": "6d3c9f422fe385f4f34d3be4c7920476163c87ec"
+      "commit": "c393f8974d44840a6c9cc6d5b5c0188a8f05143d"
     },
     "github-electron/github-electron.d.ts": {
       "commit": "7fffbd3e040a93c244777e3be04cd6223ac69301"
@@ -40,6 +40,18 @@
     },
     "chokidar/chokidar.d.ts": {
       "commit": "6d3c9f422fe385f4f34d3be4c7920476163c87ec"
+    },
+    "node-uuid/node-uuid.d.ts": {
+      "commit": "c393f8974d44840a6c9cc6d5b5c0188a8f05143d"
+    },
+    "node-uuid/node-uuid-base.d.ts": {
+      "commit": "c393f8974d44840a6c9cc6d5b5c0188a8f05143d"
+    },
+    "node-uuid/node-uuid-cjs.d.ts": {
+      "commit": "c393f8974d44840a6c9cc6d5b5c0188a8f05143d"
+    },
+    "es6-promise/es6-promise.d.ts": {
+      "commit": "c393f8974d44840a6c9cc6d5b5c0188a8f05143d"
     }
   }
 }
